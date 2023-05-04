@@ -39,33 +39,47 @@ export default {
 .link {
     display: flex;
     align-items: center;
+    text-align: left;
+    padding-left: 30px;
 
     cursor: pointer;
     position: relative;
-    font-weight: 400;
+    font-weight: 500;
     user-select: none;
+    font-size: large;
 
-    margin: 0.1em 0;
-    padding: 0.4em;
-    border-radius: 0.25em;
+    margin: 0.1em 0.1;
+    padding: 0.5em;
+    border-radius: 2.5em;
     height: 1.5em;
 
-    color: white;
+    color: rgba(255, 252, 252, 0.696);
     text-decoration: none;
 
 }
 
 .link:hover {
-    background-color: var (--sidebar-item-hover);
+    color:white;
 }
 
 .link.active {
-    background-color: var (--sidebar-item-active);
+    color:white;
+   
 }
 
 .link.icon {
     flex-shrink: 0;
-    width: 25px;
-    margin-right: 10px;
+    width: 50px;
+    margin-right: 20px;
+}
+
+.link.active:before{
+    content: '';
+    width: 4px;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    top: 5%;
+    left:-1px;
 }
 </style>
