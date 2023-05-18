@@ -2,11 +2,10 @@
 <template>
     <div class="vue-tempalte">
         <!-- Main -->
-        <div class="container-fluid ps-md-0">
-            <div class="row g-0">
-                <div class="d-none d-md-flex col-md-8 col-lg-6 bg-image"></div>
-                <div class="col-md-8 col-lg-6">
-                    <div class="App">
+        <div class ="container">
+            <div class="row">
+                <div class="d-none d-md-flex col-md-6 bg-image"></div>
+                <div class="col-md-6 col-lg-6">
                         <div class="vertical-center">
                             <div class="inner-block">
                                 <h3 class="login-heading mb-4">Bievenido a DeepLabUV</h3>
@@ -46,7 +45,6 @@
                                 </form>
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -90,7 +88,7 @@ export default {
                             }
                             else if (data.message == "Login Success") {
 
-                                this.$router.push({ name: 'ConfParameters' })
+                                this.$router.push({ name: 'ConfigParameters' })
                             }
                             else {
                                 alert("Incorrect Code and Password not match");

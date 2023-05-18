@@ -1,11 +1,10 @@
 <template>
     <div class="vue-tempalte">
         <!-- Main -->
-        <div class="container-fluid ps-md-0">
-            <div class="row g-0">
+        <div class="container">
+            <div class="row">
                 <div class="d-none d-md-flex col-md-8 col-lg-6 bg-image"></div>
                 <div class="col-md-8 col-lg-6">
-                    <div class="App">
                         <div class="vertical-center">
                             <div class="inner-block">
                                 <form>
@@ -25,7 +24,6 @@
                                 </form>
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>

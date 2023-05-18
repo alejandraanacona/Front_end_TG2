@@ -1,4 +1,5 @@
 <template>
+    
     <router-link :to="to" class="link" :class="{ active: isActive }">
         <i class="icon" :class="icon" />
         <transition name="fade">
@@ -36,6 +37,7 @@ export default {
 .fade-leave-to{
     opacity: 0;
 }
+
 .link {
     display: flex;
     align-items: center;

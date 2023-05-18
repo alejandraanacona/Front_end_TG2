@@ -1,60 +1,111 @@
 <template>
-    <div class="hello">
-      <h1>{{ msg }}</h1>
-      <p>
-        For a guide and recipes on how to configure / customize this project,<br>
-        check out the
-        <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-      </p>
-      <h3>Installed CLI Plugins</h3>
-      <ul>
-        <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-        <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router" target="_blank" rel="noopener">router</a></li>
-        <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-      </ul>
-      <h3>Essential Links</h3>
-      <ul>
-        <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-        <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-        <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-        <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-        <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-      </ul>
-      <h3>Ecosystem</h3>
-      <ul>
-        <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-        <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-        <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-        <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-        <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-      </ul>
+  <div class="tele">
+    <h2>Teleoperación</h2>
+    <div class="row2">
+      <div class="column2">
+        
+        <camt>Videocámara izquierda AWS Deepracer</camt>
+        <div class="box camaraizq">
+
+        </div>
+        <h4>Control teleoperación</h4>
+        <div class="box joy">
+          <div id="joystick" style="width:100%">
+            <svg width="100%" height="100%" viewBox="0 0 100 100">
+              
+              <circle cx="50" cy="50" r="50" fill="url(#grad1)" />
+              <circle cx="50" cy="50" r="47" fill="url(#grad2)" stroke="#167ed8" stroke-width="0.8px" />
+              <circle cx="50" cy="50" r="44" fill="url(#grad3)" />
+              <circle cx="50" cy="50" r="20" fill="white" stroke="#167ed8" stroke-width="0.5px"
+                onclick="alert('CENTER');" />
+              <path d="M50,10 58,22 43,22Z" fill="#167ed8" onclick="alert('UP');" />
+              <path d="M50,90 58,78 43,78Z" fill="#167ed8" onclick="alert('DOWN');" />
+              <path d="M10,52 22,60 22,46Z" fill="#167ed8" onclick="alert('LEFT');" />
+              <path d="M90,52 78,60 78,46Z" fill="#167ed8" onclick="alert('RIGHT');" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="column2">
+        <camt>Videocámara derecha AWS Deepracer</camt>
+
+        <div class="box camarader">
+
+        </div>
+
+      
+      <camt>Datos sensor LÌDAR</camt>
+
+      <div class="box datoslidar">
+
+
+
+      </div>
+      </div>
     </div>
-  </template>
+  </div>
+</template>
+    
+<script>
+
+</script>
+    
+
+<style >
+
+.tele{
+  margin-top: 3%;
+}
+.row2 {
+  display: flex;
   
-  <script>
-  export default {
-    name: 'HelloWorld',
-    props: {
-      msg: String
-    }
-  }
-  </script>
+}
+
+/* Create two equal columns that sits next to each other */
+.column2 {
+  flex: 50%;
   
-  <!-- Add "scoped" attribute to limit CSS to this component only -->
-  <style scoped lang="scss">
-  h3 {
-    margin: 40px 0 0;
-  }
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-  a {
-    color: #42b983;
-  }
-  </style>
-  
+}
+camt{
+  margin-left: 80px;
+  margin-bottom: 0%
+}
+h4{
+  margin: 20px 230px 20px 230px;
+}
+h2{
+  margin-left: 30px;
+  padding: 5px;
+}
+
+.box {
+
+  background: #ffffff;
+  box-shadow: 0px 14px 80px rgba(53, 54, 80, 0.2);
+  border-radius: 30px;
+  transition: all .3s;
+}
+
+.camaraizq {
+  width: 400px;
+  margin: 20px 75px;
+  padding: 100px 500px 250px 70px;
+}
+
+.camarader {
+  width: 400px;
+  margin: 20px 45px;
+  padding: 100px 500px 250px 70px;
+}
+
+.joy {
+  width: 400px;
+  margin: 20px 150px;
+  padding: 80px 120px 80px 120px;
+}
+.datoslidar{
+  width: 400px;
+  margin: 20px 45px;
+  padding: 100px 500px 250px 70px;
+}
+</style>

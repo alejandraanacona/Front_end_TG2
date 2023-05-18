@@ -1,11 +1,13 @@
 <template>
-  <header></header>
+   
     <Sidebar />
+    
     <div :style="{ 'margin-left': sidebarWidth }">
-  
+
       <router-view />
     
     </div>
+
 </template>
 
 <script>
@@ -21,12 +23,5 @@ export default {
 </script>
 
 <style>
-header {
-  width: 100%;
-  height: 60px;
-  background: #ac7a7a;
-  display: flex;
-  align-items: center;
-  position: fixed;
-}
+
 </style>

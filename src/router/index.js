@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import ConfigParameters from '../views/ConfigParameters.vue'
 import ModoTele from '../views/ModoTele.vue'
 import ModoAuto from '../views/ModoAuto.vue'
 import ModoProgramado from '../views/ModoProgramado.vue'
@@ -22,14 +22,13 @@ const routes = [
   },
 
   {
-    path: '/config',
-    name: 'ConfParameters',
+    path:'/dashboard',
     component: () => import('../views/AppContenido.vue'),
     children:[
         {
-        path: '/home',
-        name: 'HomeView',
-        component: HomeView
+        path: '/config',
+        name: 'ConfigParameters',
+        component: ConfigParameters
         },
 
         {

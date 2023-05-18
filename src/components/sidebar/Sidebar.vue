@@ -1,33 +1,40 @@
 <template>
-    
+   
     <div class="sidebar" :style = "{width: sidebarWidth}">
+    
+        <header></header>
+        <br>
+        <br>
         <h1>
             <span v-if ="collapsed">
+                
                 <div>D</div>
                 <div>L</div>
             </span>
-            <span v-else> DeepLab UV</span>
+            <span v-else>&nbsp; DeepLab UV</span>
         </h1>
         
-        <SidebarLink to ="/home" icon="fa fa-cogs">&nbsp; Configuración de Parámetros </SidebarLink>
+        <SidebarLink to ="/config" icon="fa fa-cogs"> &nbsp;&nbsp; Configuración de Parámetros </SidebarLink>
         <br>
-        <SidebarLink to ="/teleoperado" icon="fa fa-laptop">&nbsp; Modo Teleoperado </SidebarLink>
+        <SidebarLink to ="/teleoperado" icon="fa fa-laptop">&nbsp;&nbsp; Modo Teleoperado </SidebarLink>
         <br>
-        <SidebarLink to ="/autonomo" icon="fa fa-road">&nbsp; Modo Autónomo </SidebarLink>
+        <SidebarLink to ="/autonomo" icon="fa fa-road">&nbsp;&nbsp; Modo Autónomo </SidebarLink>
         <br>
             <ul class="sub-menu">    
-                <SidebarLink to ="/programado" icon="fa fa-file-code-o">&nbsp; Modo programado </SidebarLink>
+                <SidebarLink to ="/programado" icon="fa fa-file-code-o">&nbsp;&nbsp; Modo programado </SidebarLink>
                 <br>
-                <SidebarLink to ="/ejecucion" icon="fa fa-play">&nbsp; Modo ejecución </SidebarLink>
+                <SidebarLink to ="/ejecucion" icon="fa fa-play">&nbsp;&nbsp; Modo ejecución </SidebarLink>
             </ul>
-        <SidebarLink to ="/manualayuda" icon="fa fa-book">&nbsp; Manual de ayuda </SidebarLink>
-
+        <SidebarLink to ="/manualayuda" icon="fa fa-book">&nbsp;&nbsp; Manual de ayuda </SidebarLink>
+        <br>
+        <SidebarLink to ="/" icon="fa fa-sign-out">&nbsp;&nbsp; Salir </SidebarLink>
+        
+       
 
         <span
             class="collapse-icon"
             :class = "{ 'rotate-180': collapsed }"
-            @click= "toggleSidebar"
-        >
+            @click= "toggleSidebar">
             <i class = "fa fa-angle-double-left" />
     </span>
     </div>
@@ -57,6 +64,17 @@ export default {
 </style>
 
 <style>
+header {
+  width: 100%;
+  height: 40px;
+  background: #167ed8;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top:0;
+  z-index: 200;
+}
+
 .sidebar {
     color:rgba(255, 252, 252, 0.696);
     background-color: var(--sidebar-bg-color);
@@ -79,7 +97,6 @@ export default {
 .sidebar h1 {
   height: 3.5em;
 }
-
 
 .collapse-icon{
     position:absolute;
