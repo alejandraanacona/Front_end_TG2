@@ -13,7 +13,10 @@
               <span class="toggle__handler"></span>
             </label>
           </div>
+          <label for="nombrepkg"> &nbsp;&nbsp; Nombre del paquete </label>
+          <input type="text" id="nombrepkg" name="nombrepkg">
         </div>
+
         <br>
         <h3>Parámetros de Odometría</h3>
         <br>
@@ -186,6 +189,10 @@ h3 {
   top: 15px;
   font-size: 18px;
   color: #092238;
+}
+
+nombrepkg{
+  margin: 20px;
 }
 
 .toggle__handler {

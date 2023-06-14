@@ -14,6 +14,12 @@
             <span v-else>&nbsp; DeepLab UV</span>
         </h1>
         
+
+
+        <SidebarLink to ="/instrucciones" icon="fa fa-book">&nbsp;&nbsp; Instrucciones de uso </SidebarLink>
+        <br>
+        <SidebarLink to ="/horario" icon="fa fa-calendar"> &nbsp;&nbsp; Agendar horario </SidebarLink>
+        <br>
         <SidebarLink to ="/config" icon="fa fa-cogs"> &nbsp;&nbsp; Configuración de Parámetros </SidebarLink>
         <br>
         <SidebarLink to ="/teleoperado" icon="fa fa-laptop">&nbsp;&nbsp; Modo Teleoperado </SidebarLink>
@@ -25,7 +31,6 @@
                 <br>
                 <SidebarLink to ="/ejecucion" icon="fa fa-play">&nbsp;&nbsp; Modo ejecución </SidebarLink>
             </ul>
-        <SidebarLink to ="/manualayuda" icon="fa fa-book">&nbsp;&nbsp; Manual de ayuda </SidebarLink>
         <br>
         <SidebarLink to ="/" icon="fa fa-sign-out">&nbsp;&nbsp; Salir </SidebarLink>
         

@@ -4,7 +4,8 @@ import ModoTele from '../views/ModoTele.vue'
 import ModoAuto from '../views/ModoAuto.vue'
 import ModoProgramado from '../views/ModoProgramado.vue'
 import ModoEjecucion from '../views/ModoEjecucion.vue'
-import ManualAyuda from '../views/ManualAyuda.vue'
+import InstruccionesUso from '../views/InstruccionesUso.vue'
+import AsignarHorario from '../views/AsignarHorario.vue'
 import AppContenido from '../views/AppContenido.vue'
 
 
@@ -25,6 +26,20 @@ const routes = [
     path:'/dashboard',
     component: () => import('../views/AppContenido.vue'),
     children:[
+
+
+        {
+        path: '/instrucciones',
+        name: 'InstruccionesUso',
+        component: InstruccionesUso
+        },
+
+        {
+          path: '/horario',
+          name: 'AsignarHorario',
+          component: AsignarHorario
+        },
+
         {
         path: '/config',
         name: 'ConfigParameters',
@@ -53,13 +68,9 @@ const routes = [
         path: '/ejecucion',
         name: 'ModoEjecucion',
         component: ModoEjecucion
-        },
-
-        {
-        path: '/manualayuda',
-        name: 'ManualAyuda',
-        component: ManualAyuda
         }
+
+       
       ]
   }
 ]

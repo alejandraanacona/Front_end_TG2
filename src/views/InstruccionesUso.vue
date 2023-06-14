@@ -1,6 +1,7 @@
 <template>
 
-<div class="row1">
+<div class="row1
+">
   <div class="column1" >
     <h2>Column 1</h2>
     <p>Some text..</p>
